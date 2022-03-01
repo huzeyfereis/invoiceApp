@@ -1,0 +1,27 @@
+#receipt-date-Add .react-datepicker-wrapper,
+#receipt-date-Update .react-datepicker-wrapper,
+#receipt-date-View .react-datepicker-wrapper {
+  display: block;
+  padding: 0;
+  border: 0;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#receipt-date-Add .receipt-date,
+#receipt-date-Update .receipt-date,
+#receipt-date-View .receipt-date {
+  height: 1.8rem;
+}
+
+.othersInput{
+  border: none;
+  border-bottom: 1px solid #ced4da;
+}
+
+.othersInput:focus{
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #ced4da;
+}
+

@@ -1,0 +1,29 @@
+.search-by-id {
+  width: 30%;
+}
+
+@media all and (max-width: 750px) {
+  .receipt-list-bar * {
+    font-size: 10px;
+  }
+  .receipt-list-bar > div:last-child {
+    order: -1;
+    align-self: flex-end;
+  }
+
+  #list-add-receipt-button {
+    padding: 5px 20px;
+    font-size: 14px;
+  }
+
+  .receipt-list-bar {
+    flex-direction: column;
+  }
+
+  .receipt-list-bar button span {
+    display: none;
+  }
+  .receipt-list-bar button::after {
+    content: 'Add';
+  }
+}

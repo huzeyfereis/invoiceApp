@@ -1,0 +1,82 @@
+/* Responsive Receipt Table
+  ==================================== */
+  @media all and (max-width: 750px) {
+    #receipt-list-flex-table.flexTable {
+      display: block;
+      width: 100%;
+      box-shadow: none;
+    }
+    #receipt-list-flex-table .flexTable-row {
+      box-sizing: border-box;
+      width: 100%;
+      display: -webkit-box;
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 2em;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    }
+  
+    #receipt-list-flex-table .flexTable-row-deleted .flexTable-cell--heading {
+      box-sizing: border-box;
+    }
+    #receipt-list-flex-table .flexTable-row-deleted {
+      color: initial;
+    }
+  
+    #receipt-list-flex-table.flexTable .flexTable-row .flexTable-cell {
+      width: 100% !important;
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      padding: 0;
+      border-bottom: 1.1px solid #706a6a38;
+    }
+    #receipt-list-flex-table.flexTable
+      .flexTable-row
+      .flexTable-cell
+      .flexTable-cell--heading {
+      display: inline-block;
+      -webkit-box-flex: 1;
+      flex: 1;
+  
+      background-color: #fff;
+      color: #000;
+      font-size: 14px;
+      line-height: 1.4;
+  
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+    }
+  
+    #receipt-list-flex-table.flexTable .flexTable-cell.icon-cell {
+      border: none;
+    }
+    #receipt-list-flex-table.flexTable .flexTable-cell--heading {
+      padding: 0.75rem 0.5rem;
+      margin: 0;
+    }
+  
+    #receipt-list-flex-table.flexTable
+      .flexTable-row
+      .flexTable-cell
+      .flexTable-cell--content {
+      -webkit-box-flex: 2;
+      flex: 2;
+      padding-left: 0.5rem;
+    }
+  
+    #receipt-list-flex-table.flexTable .icon-content {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    #receipt-list-flex-table.flexTable .icon-content > svg {
+      margin-right: 1rem;
+    }
+  
+    #receipt-list-flex-table.flexTable .flexTable-row--head {
+      display: none;
+    }
+  }
+  

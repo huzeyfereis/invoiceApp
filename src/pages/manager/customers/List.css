@@ -1,0 +1,13 @@
+@media all and (max-width: 750px) {
+
+    .customer-list-bar  * {
+        font-size: 12px;
+    }
+
+    .customer-list-bar button span {
+        display: none;
+    }
+    .customer-list-bar button::after {
+        content:'Add'
+    }
+}

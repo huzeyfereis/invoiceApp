@@ -1,0 +1,43 @@
+.customer-pagination .page-link {
+  color: black;
+  padding: 0.5rem 1rem;
+  transition: all .25s ease-in;
+  margin-top: 1em;
+}
+
+.customer-pagination .page-link:hover {
+  z-index: 2;
+  color:#000;
+  font-family: 700;
+  text-decoration: none;
+  background-color: #c5def6;
+  border-color: #dee2e6;
+}
+.customer-pagination .page-item.active .page-linkh {
+  z-index: 3;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.customer-pagination.pagination {
+  background: transparent;
+}
+
+/* Responsive Pagination
+  ==================================== */
+  @media all and (max-width: 750px) {
+    .customer-pagination {
+      
+    display: flex;
+    flex-flow: wrap;
+    }
+
+    .customer-pagination .page-item:first-child {
+      display: none;
+    }
+ 
+    .customer-pagination .page-item:last-child {
+      display: none;
+    }
+  }

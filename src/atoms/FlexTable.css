@@ -1,0 +1,399 @@
+html {
+  width: 100vw;
+}
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+.wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 1em auto;
+  padding: 1em;
+  margin-top: 2rem;
+}
+
+/*======================CUSTOMER TABLE STYLES =============================== */
+/* Table column sizing
+  ================================== */
+#customer-list-flex-table .firstName-cell {
+  width: 17%;
+}
+
+#customer-list-flex-table .lastName-cell {
+  width: 17%;
+}
+
+#customer-list-flex-table .createdAt-cell {
+  width: 17%;
+}
+
+#customer-list-flex-table .createdBy-cell {
+  width: 24%;
+}
+
+#customer-list-flex-table .icon-cell {
+  width: 20%;
+}
+
+/* Sub Table column sizing
+    ================================== */
+
+#customer-list-flex-subtable.subFlexTable .id-cell {
+  width: 20%;
+}
+
+#customer-list-flex-subtable.subFlexTable .date-cell {
+  width: 30%;
+}
+#customer-list-flex-subtable.subFlexTable .createdBy-cell {
+  width: 20%;
+}
+
+#customer-list-flex-subtable.subFlexTable .amount-cell {
+  width: 20%;
+}
+
+#customer-list-flex-subtable.subFlexTable .icon-cell {
+  width: 10%;
+}
+
+/*======================USERS TABLE STYLES =============================== */
+/* Table column sizing
+  ================================== */
+  #manager-list-flex-table .name-cell {
+    width: 60%;
+  }
+  #manager-list-flex-table .firstName-cell {
+    width: 20%;
+  }
+  #manager-list-flex-table .lastName-cell {
+    width: 20%;
+  }
+  #manager-list-flex-table .email-cell {
+    width: 20%;
+  }
+  #manager-list-flex-table .branch-cell {
+    width: 18%;
+  }
+  #manager-list-flex-table .icon-cell {
+    width: 18%;
+  }
+
+/* Apply styles Main Table
+    ================================== */
+.flexTable {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+.flexTable .flexTable-row {
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  overflow: hidden;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+.flexTable .flexTable-row:nth-child(even){background-color: rgba(0,0,0,.05);}
+
+.flexTable .flexTable-row.flexTable-row--head:hover {
+  background-color: white;
+  box-shadow: none;
+}
+
+.flexTable .flexTable-row:hover {
+  color: #212529;
+  background-color: rgba(0,0,0,.075);
+  font-weight: 400;
+}
+
+.flexTable .flexTable-row-deleted {
+  border-left: 1px solid red;
+}
+
+.flexTable .flexTable-row .flexTable-cell {
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  padding: .3rem;
+  overflow: hidden;
+  list-style: none;
+  border: 1px solid #dee2e6;
+}
+.flexTable .flexTable-row .flexTable-cell.column-heading {
+  color: #000;
+  line-height: 1.4;
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  border-bottom: 2px solid #dee2e6;
+  cursor: pointer;
+}
+
+.flexTable
+  .flexTable-row
+  .flexTable-cell
+  .flexTable-cell--heading {
+  display: none;
+}
+
+.flexTable .flexTable-row .row-number-cell {
+  font-weight: 600;
+  width: 4%;
+  text-align: center;
+}
+
+.icon-content {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.icon-content > svg {
+  margin: 0 1rem
+}
+.icon-content > svg:hover {
+  filter: drop-shadow( .3em .3em .5em);
+}
+
+#customer-list-flex-table.flexTable .flexTable-row-active {
+  border: 2px solid #000;
+  filter: drop-shadow( .3em .3em .2em);
+  background-color: #ebebeb;
+  animation: active-row 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border-radius: .5em;
+}
+
+#customer-list-flex-table.flexTable .flexTable-row-active.flexTable-row-deleted {
+  border-left: 5px solid red;
+}
+
+#customer-list-flex-table.flexTable .flexTable-row--head {
+  margin-bottom: 0;
+}
+
+@keyframes active-row {
+  0% {
+    border-color: #fff;
+  }
+
+  100% {
+    border-color: #333a40;
+
+    /* transform: translateY(0); */
+  }
+}
+
+/* Apply styles Sub Table
+    ================================== */
+#customer-list-flex-subtable.subFlexTable {
+  border-radius: 10px;
+  box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+  animation: slide-up 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  overflow-y: scroll !important;
+  max-height: 300px;
+  margin-bottom: 10px;
+}
+
+#customer-list-flex-subtable.subFlexTable .flexTable-row {
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  overflow: hidden;
+  margin-bottom: 0;
+  border-radius: 0;
+  background-color: #ffffff;
+  max-height: 350px;
+  transition: all 500ms ease-in-out;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+#customer-list-flex-subtable.subFlexTable .flexTable-row--head {
+  font-family: 'Lato', sans-serif;
+}
+#customer-list-flex-subtable.subFlexTable .flexTable-row:hover {
+  background-color: white;
+  font-weight: 300;
+  box-shadow: none;
+}
+#customer-list-flex-subtable.subFlexTable .flexTable-row .flexTable-cell.column-heading {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.4;
+  background-color: #333a40;
+}
+
+#customer-list-flex-subtable.subFlexTable::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+}
+
+#customer-list-flex-subtable.subFlexTable::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+}
+
+#customer-list-flex-subtable.subFlexTable::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #333a40;
+  border-radius: 5px;
+}
+
+
+/* =================================RECEIPT TABLE STYLES================================== */
+
+/* Receipt Table column sizing
+  ================================== */
+#receipt-list-flex-table .id-cell {
+  width: 5%;
+  text-align: center;
+}
+
+#receipt-list-flex-table .customer-cell {
+  width: 26%;
+}
+
+#receipt-list-flex-table .date-cell {
+  width: 15%;
+}
+
+#receipt-list-flex-table .receivedBy-cell {
+  width: 23%;
+}
+#receipt-list-flex-table .amount-cell {
+  width: 10%;
+  text-align: center;
+}
+
+#receipt-list-flex-table .icon-cell {
+  width: 17%;
+}
+
+@keyframes active-row {
+  0% {
+    border-color: #fff;
+  }
+
+  100% {
+    border-color: #333a40;
+
+    /* transform: translateY(0); */
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    max-height: 0;
+  }
+
+  100% {
+    max-height: 300px;
+
+    /* transform: translateY(0); */
+  }
+}
+
+
+/* =================================DASHBOARD TABLE STYLES================================== */
+#dashboard-list-flex-table .id-cell {
+  width: 20%;
+  text-align: center;
+}
+
+#dashboard-list-flex-table .customer-cell {
+  width: 50%;
+}
+#dashboard-list-flex-table .amount-cell {
+  width: 30%;
+  text-align: center;
+}
+/* ====================================Responsive Table==================================== */
+@media all and (max-width: 750px) {
+  .flexTable {
+    display: block;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .flexTable-row {
+    box-sizing: border-box;
+    width: 100%;
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    background-color: white !important;
+  }
+  .flexTable .flexTable-row .flexTable-cell .icon-content {
+    padding: .3rem
+  }
+
+
+  .flexTable-row-deleted .flexTable-cell--heading {
+    box-sizing: border-box;
+  }
+  .flexTable-row-deleted {
+    color: initial;
+  }
+
+ .flexTable .flexTable-row .flexTable-cell {
+    width: 100% !important;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0;
+    
+  }
+  .flexTable
+    .flexTable-row
+    .flexTable-cell
+    .flexTable-cell--heading {
+    display: inline-block;
+    -webkit-box-flex: 1;
+    flex: 1;
+    background-color: #fff;
+    color: #000;
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+  }
+
+  .flexTable .flexTable-cell.icon-cell {    
+    order: -1;
+  }
+  .flexTable .flexTable-cell--heading {
+    padding: .3rem;
+    margin: 0;
+  }
+
+  .flexTable
+    .flexTable-row
+    .flexTable-cell
+    .flexTable-cell--content {
+    -webkit-box-flex: 2;
+    flex: 2;
+  }
+
+  .flexTable .icon-content {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .flexTable .icon-content > svg {
+    margin-right: 1rem;
+  }
+
+  .flexTable .flexTable-row--head {
+    display: none;
+  }
+  #customer-list-flex-subtable.subFlexTable .flexTable-row {
+    height: auto;
+  }
+}

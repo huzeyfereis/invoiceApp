@@ -1,0 +1,17 @@
+.receipt-modal {
+  height: 800px;
+}
+
+.receipt-modal .modal-content {
+  border: none;
+}
+
+.receipt-customer-details-modal .modal-content {
+  width: 0;
+  border: none;
+}
+
+.receipt-customer-details-modal .customer-form {
+  width: 800px;
+  transform: scale(0.7);
+}

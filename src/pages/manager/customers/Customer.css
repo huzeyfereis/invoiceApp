@@ -1,0 +1,31 @@
+.customer-form {
+  position: relative;
+  max-width: 760px;
+}
+.customer-form .customer-deleted-label {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* // Customer View component styles */
+.customer-form input[readonly]{
+  border: 1px solid #292b2c;
+  font-size: 1em;
+}
+
+/* //Add Customer component Styles */
+.customer-form .form-validate input[readonly]{
+  border: 1px solid red;
+}
+
+
+@media all and (max-width: 750px) {
+
+  .customer-form  {
+    padding: 0;
+  }
+  .customer-form .card-body {
+    padding: 0;
+  }
+}
